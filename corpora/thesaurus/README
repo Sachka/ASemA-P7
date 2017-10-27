@@ -1,0 +1,33 @@
+Distributional Thesauri for French
+==================================
+
+This release includes one distributional thesaurus file for each of four
+different part-of-speech categories: adjectives, adverbs, common nouns, and
+verbs. Each line of the file corresponds to a lexical term's entry in the
+thesaurus, and is of the tab-separated form:
+
+<term>	<neighborterm1>:<neighborsim1>	<neighborterm1>:<neighborsim2>	...
+
+Where neighbor terms are ordered in descending similarity, and all similarity
+scores are between 0 and 1. Neighbors with similarity scores of 0 are not
+included in the entry. Additionally, all terms are lemmatized and appear in a
+| separated form with POS tag and lemma. There are a total of 3,245 
+adjectives, 707 adverbs, 9448 common nouns, and 2545 verbs.
+
+Only the 100-nearest neighbors are included in each entry, for compactness.
+
+Due to the fully automatic nature of the part-of-speech tagging and syntactic
+parsing processes, there is some noise in the lemmatization and distributional
+similarities found in the thesaurus.
+
+Partial example for the adverb 'toutefois':
+ADV|toutefois	ADV|cependant:0.66187516606	ADV|néanmoins:0.520516424154
+
+
+Contact
+=======
+
+Enrique	Henestroza Anguiano
+U.F.R. Linguistique, Université Paris 7
+henestro@inria.fr
+
